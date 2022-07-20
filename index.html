@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parallax Landing Page</title>
   </head>
-  <body class="bg-bkg text-white selection:bg-accent selection:text-bkg">
+  <body class="bg-bkg text-white text-base selection:bg-accent selection:text-bkg">
     <div id="parallax">
       <nav class="grid place-items-center w-full absolute top-0 z-50 drop-shadow-text-sm">
         <a href="/" class="p-1 m-4 focus:outline-none focus-visible:ring-4 ring-accent rounded-full transition-shadow">
@@ -48,7 +48,7 @@
         <a href="#contact-form" class="bg-accent text-bkg font-medium py-3 px-12 rounded-full
         border border-bkg focus:outline-none focus-visible:ring-4 ring-accent ring-offset-bkg
         ring-offset-2 hover:bg-accent/90 flex space-x-2
-        drop-shadow-text-lg hover:drop-shadow-none transition-shadow">
+        drop-shadow-text-lg hover:drop-shadow-none transition-shadow items-center">
           <span class="uppercase tracking-wide">
             Book a Trip
           </span>
@@ -68,6 +68,77 @@
           <p class="text-muted drop-shadow-text-sm">
             We find once-in-a-lifetime locations and reserve them for travelers full of adventure. Calling all explorers and extremists to the trip of their dreams in the most exotic locations all around the globe.
           </p>
+        </section>
+        <section class="container grid gap-4 text-center sm:text-left relative max-w-prose">
+          <div class="relative">
+            <div class="hidden sm:block absolute w-8 bg-accent/10 -left-4 h-full">
+
+            </div>
+          <div>
+            <small class="tracking-wide drop-shadow-text-sm text-accent uppercase">Of the beaten path</small>
+            <h2 class="text-3xl font-bold tracking-wide drop-shadow-text-md capitalize">
+              Places without people
+            </h2>
+          </div>
+          <div class="flex flex-wrap sm:flex-nowrap justify-center sm:justify-between
+          items-center space-x-4 space-y-4">
+
+            <p class="text-muted max-w-2xl drop-shadow-text-sm">
+              We find once-in-a-lifetime locations and reserve them for travelers full of adventure. Calling all explorers and extremists to the trip of their dreams in the most exotic locations all around the globe.
+            </p>
+            <div class="flex space-x-4">
+              <button data-slideBtn id="prev" disabled class="bg-accent grid place-items-center p-2 rounded-full hover:bg-accent/90 text-bkg focus:outline-none focus-visible:ring-4 ring-offset-2 ring-offset-bkg ring-accent disabled:bg-accent/20 disabled:text-accent">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="pointer-events-none" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></circle><polyline points="121.9 161.9 88 128 121.9 94.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline><line x1="168" y1="128" x2="88" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line></svg>
+              </button>
+             
+              <button data-slideBtn id="next" class="bg-accent grid place-items-center p-2 rounded-full hover:bg-accent/90 text-bkg focus:outline-none focus-visible:ring-4 ring-offset-2 ring-offset-bkg ring-accent disabled:bg-accent/20 disabled:text-accent">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="pointer-events-none" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></circle><polyline points="134.1 161.9 168 128 134.1 94.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline><line x1="88" y1="128" x2="168" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line></svg>
+              </button>
+            </div>
+          </div>
+          </div>
+        </section>
+        <div class="-mt-10 sm:-mt-20
+        lg:-mt-36 container xs:w-screen">
+          <div data-slideContainer class="flex transition-transform duration-500">
+              <div data-slide class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-96 pr-4">
+                <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-1.jpg" alt="Iceland scene">
+                <p class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Ocean Wonders</p>
+              </div>
+              <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-96 pr-4" data-slide>
+              <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-2.jpg" alt="Iceland Scene">
+              <p class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Waterfall Cave</p>
+            </div>
+            <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-96 pr-4" data-slide>
+              <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-3.jpg" alt="Iceland Scene">
+              <p class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Rainbow Falls</p>
+            </div>
+            <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-96 pr-4" data-slide>
+              <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-4.jpg" alt="Iceland Scene">
+              <p class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Canyon Peaks</p>
+            </div>
+            <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-96 pr-4" data-slide>
+              <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-5.jpg" alt="Iceland Scene">
+              <p class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Mountain Inlet</p>
+            </div>
+            <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-96 pr-4" data-slide>
+              <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-6.jpg" alt="Iceland Scene">
+              <p class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Angel Cliffs</p>
+            </div>
+            <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-96 pr-4" data-slide>
+              <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-7.jpg" alt="Iceland Scene">
+              <p class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Aurora Sound</p>
+            </div>
+            <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-96 pr-4" data-slide>
+              <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-8.jpg" alt="Iceland Scene">
+              <p class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Icy Meadows</p>
+            </div>
+          </div>
+        </div>
+        <section
+        class="container flex flex-wrap md:space-x-16 space-y-12 md:space-y-0 justify-between items-center">
+          <img src="" alt="map">
+          <div></div>
         </section>
       </main>
     </div>
