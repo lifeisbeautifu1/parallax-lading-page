@@ -85,3 +85,20 @@ form.addEventListener('submit', async (e) => {
   await postEmailToDatabase(emailValue);
   submitBtn.innerHTML = contactBtnOptions.success;
 });
+
+// Fade up event
+
+const fadeUpObserver = new IntersectionObserver((elsToWatch) => {
+  elsToWatch.forEach(el => {
+    if (el.isIntersecting) {
+      el.target.classList.add('faded');
+      fadeUpObserver.unobserve(el);
+    }
+  });
+}, {
+  threshold: .75,
+});
+
+document.querySelectorAll('.fade-up').forEach((item) => {
+  fadeUpObserver.observe(item)
+})
